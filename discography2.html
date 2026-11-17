@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--
+===========================================
+  レッスン アーティストサイト制作
+  discography.html（音楽作品ページ）【練習用】
+===========================================
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCOGRAPHY | M!LK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー（MUSICのリンクにcurrentクラスを付ける） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="site-logo">M!LK</a>
+            <nav class="site-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li> <!-- 現在のページにはcurrentクラスを付ける -->
+                    <li><a href="biography.html">BIO</a></li>
+                    <li><a href="member.html">MEMBER</a></li>
+                    <li><a href="discography.html" class="current">DISCOGRAPHY</a></li>
+                    <li><a href="live.html">LIVE</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <div class="page-hero">
+            <div class="container">
+                <h1 class="page-title">DISCOGRAPHY</h1>
+            </div>
+        </div>
+
+
+        <!-- ========================================
+      アルバム一覧
+      カードの枠の平行四辺形クリップはCSS側で完成させています
+      （傾きが浅いのは、横長カードで文字が斜めに切れないようにするため）
+    ======================================== -->
+        <section class="albums">
+            <div class="container">
+                <div class="album-detail-grid"> <!-- CSS Gridで横並び -->
+
+                    <article class="album-detail-card"> <!-- カードの枠だけ平行四辺形にクリップ（完成済み） -->
+                        <div class="album-detail-img"> <!-- こちらはクリップなし。通常の角丸正方形 -->
+                            <img src="images/discography02.jpg" alt="LOVE ENG!NE">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">LOVE ENG!NE</h3>
+                        </div>
+                    </article>
+
+                    <article class="digital-detail-card"> <!-- カードの枠だけ平行四辺形にクリップ（完成済み） -->
+                        <div class="digital-detail-img"> <!-- こちらはクリップなし。通常の角丸正方形 -->
+                            <img src="images/discography03.jpg" alt="罪と罰と雨とキス">
+                        </div>
+                        <div class="digital-info">
+                            <h3 class="digital-title">罪と罰と雨とキス</h3>
+                        </div>
+                    </article>
+
+                    <article class="album-detail-card">
+                        <div class="album-detail-img">
+                            <img src="images/discography.04.jpg" alt="爆裂愛してる / 好きすぎて滅！">
+                        </div>
+                        <div class="album-info">
+                            <h3 class="album-title">爆裂愛してる / 好きすぎて滅！</h3>
+                        </div>
+                    </article>
+
+                     <article class="digital-detail-card">
+                        <div class="digital-detail-img">
+                            <img src="images/disco.4.jpg" alt="しおざきわんだーらんど">
+                        </div>
+                        <div class="digital-info">
+                            <h3 class="digital-title">しおざきわんだーらんど</h3>
+                        </div>
+                    </article>
+
+                    <div class="section-more">
+                        <a href="discography2.html" class="btn-outline">VIEW ALL</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+      ミュージックビデオ
+      video タグ + poster属性はすでに書いてあります（再生前にサムネイルを表示）
+      ★やってみよう★ ⑨ CSS側で .video-wrap に aspect-ratio:16/9 を書こう
+      ★やってみよう★ ⑦ CSS側で .mv-section に clip-path（斜めカット）を書こう
+    ======================================== -->
+
+        </section>
+        <section class="mv-section">
+            <div class="container">
+                <h2 class="section-title">MUSIC VIDEOS</h2>
+
+                <div class="mv-grid"> <!-- CSS Gridで横並び -->
+
+                    <div class="mv-item">
+                        <div class="video-wrap">
+                            <!-- poster属性 = 再生前に表示する静止画。
+                   再生ボタンを押すまではこの画像が表示され、押すと動画に切り替わる -->
+                            <video src="video/video2.mp4" controls preload="metadata" poster="hero-thumb01.jpg"></video>
+                        </div>
+                        <p class="mv-title"> M!LK - 好きすぎて滅！(Official Music Video))</p>
+                    </div>
+
+                    <div class="mv-item">
+                        <div class="video-wrap">
+                            <video src="images/hero-thumb01.jpg" controls preload="metadata"
+                                poster="images/hero-thumb02.jpg"></video>
+                        </div>
+                        <p class="mv-title">M!LK - 爆裂愛してる (Official Music Video)</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p class="footer-logo">M!LK</p> <!-- フッターのロゴ -->
+                <nav class="footer-nav"> <!-- フッターナビ（Flexboxで横並び） -->
+                    <a href="index.html" class="current">HOME</a> <!-- 現在のページにはcurrentクラスを付ける -->
+                    <a href="biography.html">BIO</a>
+                    <a href="member.html">MEMBER</a>
+                    <a href="discography.html">DISCOGRAPHY</a>
+                    <a href="live.html">LIVE</a>
+                </nav>
+                <div class="sns-links"> <!-- SNSリンク（Flexboxで横並び） -->
+                    <a href="https://www.instagram.com/milk_official_2014?igsh=ODBhOG9iM2h6ZHhr"
+                        class="sns-link">Instagram</a>
+                    <a href="https://x.com/milk_info?s=21" class="sns-link">Twitter/X</a>
+                    <a href="https://youtube.com/@milk_2014?si=dloYsT0mTRIBhROK" class="sns-link">YouTube</a>
+                </div>
+                <p class="footer-copy">© 2026 STARDUST PROMOTION, INC. STARDUST MUSIC, INC. Powered by SKIYAKI Inc.</p>
+                <!-- コピーライト表記。&copy;は©マークの文字実体参照 -->
+            </div>
+        </footer>
+
+</body>
+
+</html>
