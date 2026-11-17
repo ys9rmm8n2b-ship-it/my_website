@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+<!--
+===========================================
+  レッスン アーティストサイト制作
+  live.html（ライブ一覧ページ）【練習用】
+===========================================
+-->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LIVE・EVENT | M!LK</title>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  
+  <!-- ヘッダー（LIVEのリンクにcurrentクラスを付ける） -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="site-logo">
-         <img src="images/rogo.milk.png" alt="milk-rogo" height="50" width="100">
-      </a>
+      <a href="index.html" class="site-logo">M!LK</a>
       <nav class="site-nav">
         <ul class="nav-list">
           <li><a href="index.html">HOME</a></li>
@@ -36,7 +39,7 @@
 
     <div class="page-hero">
       <div class="container">
-        <h1 class="page-title">LIVE・EVENT</h1>
+        <h1 class="page-title">LIVE</h1>
       </div>
     </div>
 
@@ -47,13 +50,14 @@
     ======================================== -->
     <section class="live-section">
       <div class="container">
+        <h2 class="section-title">LIVE・EVENT</h2>
         <p class="section-subtitle">EVENT</p>
-        <article class="live-item">
+        <article class="event-item">
 
-           <div class="live-info">
-           <p class="live-category">FES</p>
+          <div class="event-info">
+            <p class="event-category">FES</p>
 
-           <h3 class="live-title">
+            <h3 class="event-title">
               「ROCK IN JAPAN FESTIVAL 2026」
             </h3>
           </div>
@@ -75,32 +79,30 @@
         </article>
 
         <!-- 詳細ページへ -->
-         <div class="section-more">
-          <a href="event.html" class="btn-outline">VIEW ALL</a>
-        </div>
+        <a href="event.html" class="view-more">
+          VIEW MORE →
+        </a>
 
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-logo"> 
-        <img src="images/rogo.milk.png" alt="milk-rogo" height="100" width="200">
-      </p> 
-      <nav class="footer-nav"> 
-        <a href="index.html">HOME</a>
+      <p class="footer-logo">M!LK</p> <!-- フッターのロゴ -->
+      <nav class="footer-nav"> <!-- フッターナビ（Flexboxで横並び） -->
+        <a href="index.html">HOME</a> <!-- 現在のページにはcurrentクラスを付ける -->
         <a href="biography.html">BIO</a>
         <a href="member.html">MEMBER</a>
         <a href="discography.html">DISCOGRAPHY</a>
         <a href="live.html" class="current">LIVE</a>
       </nav>
-      <div class="sns-links"> 
+      <div class="sns-links"> <!-- SNSリンク（Flexboxで横並び） -->
         <a href="https://www.instagram.com/milk_official_2014?igsh=ODBhOG9iM2h6ZHhr" class="sns-link">Instagram</a>
         <a href="https://x.com/milk_info?s=21" class="sns-link">Twitter/X</a>
         <a href="https://youtube.com/@milk_2014?si=dloYsT0mTRIBhROK" class="sns-link">YouTube</a>
       </div>
       <p class="footer-copy">© 2026 STARDUST PROMOTION, INC. STARDUST MUSIC, INC. Powered by SKIYAKI Inc.</p>
-     
+      <!-- コピーライト表記。&copy;は©マークの文字実体参照 -->
     </div>
   </footer>
 
